@@ -1,0 +1,306 @@
+@import url("https://fonts.cdnfonts.com/css/ica-rubrik-black");
+@import url("https://fonts.cdnfonts.com/css/poppins");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #d2d2d2;
+  background-image: repeating-linear-gradient(
+      to right,
+      transparent 0 100px,
+      #25283b22 100px 101px
+    ),
+    repeating-linear-gradient(
+      to bottom,
+      transparent 0 100px,
+      #25283b22 100px 101px
+    );
+}
+
+.banner {
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.banner .slider {
+  position: absolute;
+  width: 250px;
+  height: 150px;
+  top: 20%;
+  left: calc(50% - 120px);
+  transform-style: preserve-3d;
+  transform: perspective(1000px);
+  animation: autoRun 30s linear infinite;
+  z-index: 2;
+}
+
+@keyframes autoRun {
+  from {
+    transform: perspective(1000px) rotateX(-16deg) rotateY(0deg);
+  }
+  to {
+    transform: perspective(1000px) rotateX(-16deg) rotateY(360deg);
+  }
+}
+
+.banner .slider .item {
+  position: absolute;
+  inset: 0 0 0 0;
+  transform: rotateY(
+      calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg)
+    )
+    translateZ(550px);
+  cursor: pointer; 
+}
+
+.banner .slider .item img {
+  width: 100%;
+  height: 100%;
+  /* object-fit: cover; */
+  object-fit: fill;
+}
+.banner .content {
+  position: absolute;
+  bottom: -43px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(1400px, 100vw);
+  height: max-content;
+  padding-bottom: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1;
+}
+.banner .content h1 {
+  font-family: "ICA Rubrik";
+  font-size: 10em;
+  line-height: 1em;
+  color: #25283b;
+  position: relative;
+}
+
+.banner .content p {
+  font-family: "ICA Rubrik";
+  font-size: 3em;
+  line-height: 1em;
+  color: #25283b;
+  position: absolute;
+  top: 60%;
+}
+
+.banner .content h1::after {
+  position: absolute;
+  inset: 0 0 0 0;
+  content: attr(data-content);
+  z-index: 2;
+  -webkit-text-stroke: 2px #d2d2d2;
+  color: transparent;
+}
+.banner .content .author {
+  font-family: Poppins;
+  text-align: right;
+  max-width: 200px;
+}
+.banner .content h2 {
+  font-size: 3em;
+}
+.banner .content .model {
+  /* background-image: url(images/model.png); */
+  width: 100%;
+  height: 75vh;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-size: auto 130%;
+  background-repeat: no-repeat;
+  background-position: top center;
+  z-index: 1;
+}
+
+/*pageBottom configurations*/
+.pageBottom {
+  width: 100%;
+  height: 160vh;
+  text-align: center;
+}
+
+.largeText {
+  width: 50%;
+  position: relative;
+  left: 2.4%;
+  top: 10%;
+}
+
+.largeText h1 {
+  font-family: "ICA Rubrik";
+  font-size: 5em;
+  line-height: 1em;
+  color: #25283b;
+  position: relative;
+  text-align: left;
+}
+
+.star {
+  width: 400px;
+  height: auto;
+  position: absolute;
+  top: 115%;
+  right: 25%;
+  animation: autoRotateAnimation;
+  animation-timeline: view();
+  z-index: 1;
+}
+
+.star2 {
+  width: 100px;
+  height: auto;
+  position: absolute;
+  top: 118%;
+  right: 28%;
+  animation: 10s rotateOnly linear infinite;
+  z-index: -1;
+}
+
+.star3 {
+  width: 175px;
+  height: auto;
+  position: absolute;
+  top: 140%;
+  right: 50%;
+  animation: 10s rotateOnly linear infinite;
+  z-index: -1;
+}
+
+@keyframes rotateOnly {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes autoRotateAnimation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.whatWeBuild {
+  position: absolute;
+  top: 0%;
+  left: 150%;
+}
+
+.whatWeBuild h1 {
+  font-family: "ICA Rubrik";
+  font-size: 3em;
+  line-height: 1em;
+  color: #25283b;
+  text-align: left;
+}
+
+.whatWeBuild p {
+  font-family: "ICA Rubrik";
+  font-size: 2.5em;
+  line-height: 1em;
+  color: #25283b;
+  text-align: left;
+}
+
+.header {
+  display: flex;
+}
+
+.header .about {
+  position: absolute;
+  left: 1%;
+  top: 2%;
+  font-family: "ICA Rubrik";
+  font-size: 1.5em;
+  color: #25283b;
+}
+
+.header .contactUs {
+  position: absolute;
+  right: 1%;
+  top: 2%;
+  font-family: "ICA Rubrik";
+  font-size: 1.5em;
+  color: #25283b;
+}
+
+.header .contactUs p {
+  color: rgb(104, 20, 193);
+}
+
+.aboutUs {
+  width: 1050px;
+  height: auto;
+  position: relative;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.aboutUs p {
+  font-family: "ICA Rubrik";
+  font-size: 2.5em;
+  color: #25283b;
+  text-align: justify;
+}
+
+.aboutUs h1 {
+  font-family: "ICA Rubrik";
+  font-size: 3em;
+  color: #25283b;
+  line-height: 2em;
+}
+
+/* .banner .slider:hover {
+  animation-play-state: paused;
+} */
+
+.pause-animation {
+  animation-play-state: paused !important;
+}
+
+.about a {
+  text-decoration: none;
+  color: #646884;
+}
+
+/*contact us form */
+.contactUsForm {
+  width: 30%;
+  height: 75%;
+  background-color: #646884;
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+}
+
+.closeButtom {
+  text-align: right;
+}
+
+.hidden {
+  display: none;
+}
+
+
