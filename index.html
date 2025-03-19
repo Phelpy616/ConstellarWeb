@@ -3,11 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CONSTELLAR WEB</title>
-    <link rel="icon" type="image/png" href="images/logo2.png">
-    <link rel="stylesheet" href="stylesED.css" />
-    <link rel="stylesheet" href="stylesED2.css" />
-    <link rel="stylesheet" href="stylesED3.css" />
+    <title>ConstellarWeb</title>
+    <link rel="icon" type="image/png" href="images/logo.png">
+    <link rel="stylesheet" href="styles1.css" />
+    <link rel="stylesheet" href="styles2.css" />
+    <link rel="stylesheet" href="animation.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <script
       type="text/javascript"
       src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
@@ -22,24 +25,23 @@
   </head>
   <body>
     <div class="banner">
+
       <div class="header">
-        <div class="about">
-          <a href="#aboutUs"><h1>ABOUT</h1></a>
-        </div>
-        <div class="contactUs">
-          <h1 class="contactUsText">CONTACT US</h1>
-        </div>
+        <img src="images/logo2.png" alt="">
+        <h1 data-url="about.html">About</h1>
+        <h1 data-url="services.html">Services</h1>
+        <h1 class="contactBtn">Contact</h1>
       </div>
 
-      <div class="contactUsForm hidden">
-        <div class="closeButtom">
-          <img
+    <div class="overlay">
+      <div class="contactUsForm">
+          <img class="closeBtn"
             src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAS1JREFUaEPtWFsOwkAInN5MT6Y306MZEvenbtuBgWgN/RXYeQBuu+Dkz3Jy/GgC33awHWgHRAW6hUQB5fR2QJZQLNAOiALK6YoDdwA3AFcAzyASuUaUwDh44I6QyKgRusxdADwmintIrMGPcm5B3Qnvk7YAMCSU3A/dogSsUARIJGd3vBQCXhLp4A2ASoAlUQI+i8ARCRt6W7frh5mXw+2c4cA4ZEvlGYgU8JkOeEikga8gsNdO9lsq+CYwaW5mDlJd6CEmrhY/v0aZPykm5nDnzwLUFvIA88TSZBQCEUCRnJLLnAJEyU25Tv/lC01kt3/tlXJ974mAT6uhDLGBsHaKfpEYJKQaKgF63VUFNoEqZdm67QCrVFVcO1ClLFu3HWCVqoprB6qUZeue3oEXr3xKMb7bQoAAAAAASUVORK5CYII="
           />
-        </div>
+
+        <h1>Contact Us</h1>
 
         <form id="contact-form" method="POST" action="#">
-          <!-- <label class="" for="name">NAME</label> -->
           <input
             class="input-control"
             type="text"
@@ -48,7 +50,6 @@
             required
           />
 
-          <!-- <label class="" for="email">E-MAIL ADDRESS</label> -->
           <input
             class="input-control"
             type="email"
@@ -57,7 +58,6 @@
             required
           />
 
-          <!-- <label class="" for="message">MESSAGE</label> -->
           <textarea
             class="contact-msg"
             rows="9"
@@ -67,25 +67,23 @@
             required
           ></textarea>
 
-          <button class="submit" type="submit" onclick="sendEmail()">
+          <button class="submit" type="submit">
             Submit
           </button>
 
           <div class="sendingEmailStatus">
-            <!-- <div class="spinner">
-            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAclJREFUaEPtmVFuAyEMRJOTtT1Zm5M1OVkbS7GEiM3YgFkj7f6lpDBv7HUMXC+bP9fN9V9OgKMjODMCny+Y7wKK/jZzjTe/ZkxOIkk0A9SLzFhDDfTI5CT415BCI2vA6XsmR46njsDPK100Z+7PnL8Vg/Q59PFEoCWeRNP48scKoIk/TDg7ZQHQxH89K094iqCQIgCt0qQQT3AI4E9wII14BCClzuE576nRtfvpxLciILmP0g29byHjmihqEcreJqX7rQjU6ZPSfQ2gTh+q9VR5Uj6SszVA2vTRIlDnf6q6bymj2wNs8wJrKZQNoKlHeokzpVDdTL5VxBMg+McBlnQpAjBswaLL6WFLYwFAbXckDywomZs5U0ujAUhbydUNnWk/0hJlmiAof8z7kRaAFIUVfZFrK4vSoq4CZHgkhHYKoupEACuPVbrWQgDk+IpTOU083ItYAKIhhgyyArQgaAw6JVSrKYfFHgAEQePULT6KM1M+Oy1POFq3OW4zvAC0gPVmxvsTwXcLrgPjHgAWhi47PADdpXkEoAT5aFzyaSBdjls29R7n6u/yLQ0Bcbrxu8Hf5SsoV6poomZEYAR4+H9PgGELByfYPgL/hz5oMXRLDekAAAAASUVORK5CYII="
-            />
-          </div> -->
-
-            <!-- <div class="emailSent">
-              <img
-                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAnhJREFUaEPtmW1uwzAIhsPJtp5s68nWnswrkT15hG8cVZXaP5OyxOEBXowJbC/+gxe3f3sDPDuCyyLQWvvsMF8T1Lh269fu+BcAvleBlwFaa2jMx7Ztw1ivbQh1r8KkAbrhs7e9hnP3XbMgYYCeKj8Va5VnwyAhAIfXMS2uw0AA2HN/0genE8oTgnADGMZfhrHeyBjruSFcAMrL3C+SwKprmwDKC8JeVyAwtThdmQ5SAQTj9zyPpowntVprCEHLseooC6DRF8Oj3nmMydwjVTjtnaIxgveXpU0wncRU0gCo9818zHide4ZznhQFFiCyQNZoTBdNR+1hBFmbdaAEQMW01PuTg8R1GT3cAOBy0KQQwn/0K4XLRFeDoFE4aPAQgcgLoukT3VOYsvo8gMyO60kjLgI0/8ulM2P81ATOO/RBByUAq5J0I/DAw50bzMKQjYBLwM5KkjZ+6IuWU1pQuAiYAB6hZ9OGFoYMgKoB5UT2lxILjadd6hoNaAYyk4nhVDPnGe+fA2CIc9mh3ZOqnAZM6klgkkhniLDnlfUPa3kAcBAVbbvTaTOTWwLGe73NnLqZCZpIe15I0VAzd0gNq6EjECXjO0C+nY4sQEK+zzyzUzZNW6EDjVJlyn2R1cEK+0z8SClEAS+fCsGcxNQiYk0luHkNKybLs9b/u+ex6aNjFVVP5ogkegixDBVOgOcMthwb1opqU+pYzQg4IPCWMIgxpnev5wZw9j9jtL6P1ZnxOl7m8jzdeoQAnBAZGYxnwhUuDOBMqSiEO2XowmkAAvJ6H/mEcjg+nyIQ/uhn1l3wsz6ioVoegaoB1efLKVQ1oPr8G6Dqwerzv6YRyEAmjVX/AAAAAElFTkSuQmCC"
+            <div class="spinner">
+              <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAclJREFUaEPtmVFuAyEMRJOTtT1Zm5M1OVkbS7GEiM3YgFkj7f6lpDBv7HUMXC+bP9fN9V9OgKMjODMCny+Y7wKK/jZzjTe/ZkxOIkk0A9SLzFhDDfTI5CT415BCI2vA6XsmR46njsDPK100Z+7PnL8Vg/Q59PFEoCWeRNP48scKoIk/TDg7ZQHQxH89K094iqCQIgCt0qQQT3AI4E9wII14BCClzuE576nRtfvpxLciILmP0g29byHjmihqEcreJqX7rQjU6ZPSfQ2gTh+q9VR5Uj6SszVA2vTRIlDnf6q6bymj2wNs8wJrKZQNoKlHeokzpVDdTL5VxBMg+McBlnQpAjBswaLL6WFLYwFAbXckDywomZs5U0ujAUhbydUNnWk/0hJlmiAof8z7kRaAFIUVfZFrK4vSoq4CZHgkhHYKoupEACuPVbrWQgDk+IpTOU083ItYAKIhhgyyArQgaAw6JVSrKYfFHgAEQePULT6KM1M+Oy1POFq3OW4zvAC0gPVmxvsTwXcLrgPjHgAWhi47PADdpXkEoAT5aFzyaSBdjls29R7n6u/yLQ0Bcbrxu8Hf5SsoV6poomZEYAR4+H9PgGELByfYPgL/hz5oMXRLDekAAAAASUVORK5CYII="
               />
-              <p>E-mail sent!</p>
-            </div> -->
+            </div>
+
+            <div class="emailSent">
+              <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAThJREFUaEPtl8ENgzAMRc0WrMAW7Y2tSrfi1m7BCmxBlQMqiiA4/k4MknvpoY3znr9L0oZu/mpuzk8uYJ2gJ+AJgB3wEQIbCC/3BOAWggU8AbCB8HJPAG5hVKCd+sfcjV9u3Usl0E79sBC9GqL33I0DR+IyAiv8Cs2VuIRADL+ReJ6Nk7lAAp41RqYCKHxIykxAA95MQAveREATvrqANrxYIPe0DBuVgBcJSE7LUvDZApLTsiR8lkAYm4XoE99PUkd+afgsgdw5rgGfLcCVqAUvEjiTCJ+HK3HOqHGuzUffEV8ljrq8txH3aiwREQukktiClIQXj9AWMJVEaXgVgaMkasCrCcQSteBVBVaJ8M79Qy750e483TTK2NWAnkJ22P+dXcA6BU/AEwA74CMENhBe7gnALQQL/ADfn6ox7bfjNAAAAABJRU5ErkJggg=="/>
+            </div>
           </div>
         </form>
       </div>
+    </div> 
 
       <div class="slider" style="--quantity: 10">
         <div class="item" style="--position: 1">
@@ -121,85 +119,81 @@
       </div>
       
       <div class="content">
-        <h1 data-content="ConstellarWeb">ConstellarWeb</h1>
-        <p>WEB DEVELOPMENT</p>
-        <!-- <div class="author">
-          <h2>WEB SITES & WEB APPS</h2>
-          <p><b>Web Development</b></p>
-        </div> -->
-        <div class="model"></div>
+        <h1>ConstellarWeb</h1>
+        <p>Web development</p>
       </div>
     </div>
+
+    <div class="line"></div>
 
     <div class="pageBottom">
-      <div class="largeText">
-        <h1>
-          OUR TEAM IS READY<br />
-          TO GIVE YOU<br />
-          WHATEVER <br />
-          WEB SITE <br />
-          YOU WANT
-        </h1>
-
-        <div class="whatWeBuild">
-          <h1>OUR PRODUCTS:</h1>
-          <br />
-          <p>WEB SITES,</p>
-          <p>WEB APPS,</p>
-          <p>E-COMMERCE STORES</p>
-          <p>&</p>
-          <p>PORTIFOLIOS.</p>
+        <div class="text">
+          <h1>Bringing Your Ideas to Life<br>
+              Without the Tech Headache
+          </h1>
+          <p>We get it, you don’t have to deal with technical complexities.
+          That’s where we come in. We handle everything from design and development 
+          to deployment and maintenance, so you can focus on your business. With our expertise, 
+          you’ll get a website or web app that looks stunning, works flawlessly, and helps you achieve your goals effortlessly.</p>
         </div>
-      </div>
 
-      <div class="starDiv">
-        <img class="star" src="images/starRotates.jpg" alt="star" />
-        <img class="star2" src="images/starRotates.jpg" alt="star" />
-        <img class="star3" src="images/starRotates.jpg" alt="star" />
-      </div>
+        <div class="animationContainer">
+          <img src="images/computer.png" alt="">
+          <img src="images/gear.png" alt="">
+          <img src="images/gear.png" alt="">
+         </div> 
 
-      <div class="aboutUs" id="aboutUs">
-        <h1>ABOUT US</h1>
-        <p>
-          WE ARE A TEAM OF YOUNG DEVS, WITH DEEP KNOWLEDGE IN CODING SKILLS SUCH
-          AS: HTML, CSS AND THE MOST POWERFUL LANGUAGE FOR WEB DEVELOPMENT,
-          JAVASCRIPT. OUR KNOWLEDGE DOESN’T STOP THERE, WE’VE ALSO BUILT OUR OWN
-          APIs AND DATABASES WHICH TAKES OUR PROJECTS TO ANOTHER LEVEL, THESE
-          SKILLS GAVE US THE POWER TO BUILD WEB SITES AND WEB APP’S LIKE THOSE
-          YOU CAN CHECK OUT ON THE TOP. IF YOU HAVE THAT PROJECT IDEA, WE’RE
-          GONNA BE VERY HAPPY IF YOU SHARE IT WITH US :)
-        </p>
-      </div>
-
-      <!--     <div
-        class="slider2"
-        style="--width: 300px; --height: 200px; --quantity: 7"
-      >
-        <div class="list2">
-          <div class="item2" style="--position: 1">
-            <img src="images2/img1.png" alt="" />
-          </div>
-          <div class="item2" style="--position: 2">
-            <img src="images2/img2.png" alt="" />
-          </div>
-          <div class="item2" style="--position: 3">
-            <img src="images2/img3.png" alt="" />
-          </div>
-          <div class="item2" style="--position: 4">
-            <img src="images2/img4.png" alt="" />
-          </div>
-          <div class="item2" style="--position: 5">
-            <img src="images2/img5.png" alt="" />
-          </div>
-          <div class="item2" style="--position: 6">
-            <img src="images2/img6.png" alt="" />
-          </div>
-          <div class="item2" style="--position: 7">
-            <img src="images2/img7.png" alt="" />
-          </div>
-        </div>
-      </div>-->
-      <script src="script.js"></script>
+        <!-- <div class="starDiv">
+          <img class="star" src="images/starRotates.jpg" alt="star" />
+          <img class="star2" src="images/starRotates.jpg" alt="star" />
+          <img class="star3" src="images/starRotates.jpg" alt="star" />
+        </div> -->
     </div>
+
+    <div class="line"></div>
+
+    <div class="contactContainer">
+      <div class="contactBlock">
+        <h1>CONTACT US</h1>
+        <p>Get in touch with us, ask anything, and we'll provide you with a free preview of how <br>
+          your website or web app will look and perform based on your unique<br>
+          needs and preferences. If you love it, we move forward with the build.<br>
+          If not, we won’t stop until you’re completely satisfied.</p>
+          <div class="contactBtn">
+            <h2>Contact Us</h2>
+          </div>
+      </div>
+    </div>
+
+    
+
+    <div class="footer">
+      <img src="images/logo2.png" alt="">
+
+      <h1 class="constellarweb">ConstellarWeb</h1>
+
+      <div>
+        <h1>Links</h1>
+        <p>Home</p>
+        <p>About</p>
+        <p>Services</p>
+        <p class="contactBtn">Contact</p>
+        <p>Projects</p>
+      </div>
+
+      <div>
+        <h1>Services</h1>
+        <p>All Services</p>
+      </div>
+
+      <div>
+        <h1>Get in touch</h1>
+        <p class="email">constellarweb@gmail.com</p>
+        <p class="telegram">Telegram: <span>https://t.me/ConstellarWeb</span><br>
+        or @ConstellarWeb</p>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
   </body>
 </html>

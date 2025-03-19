@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services</title>
+    <link rel="icon" type="image/png" href="images/logo.png">
+    <link rel="stylesheet" href="services.css">
+    <link rel="stylesheet" href="styles2.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="header">
+      <img src="images/logo2.png" alt="">
+      <h1 data-url="about.html">About</h1>
+      <h1 data-url="services.html">Services</h1>
+      <h1 class="contactBtn">Contact</h1>
+    </div>
+
+    <div class="overlay">
+        <div class="contactUsForm">
+            <img class="closeBtn"
+              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAS1JREFUaEPtWFsOwkAInN5MT6Y306MZEvenbtuBgWgN/RXYeQBuu+Dkz3Jy/GgC33awHWgHRAW6hUQB5fR2QJZQLNAOiALK6YoDdwA3AFcAzyASuUaUwDh44I6QyKgRusxdADwmintIrMGPcm5B3Qnvk7YAMCSU3A/dogSsUARIJGd3vBQCXhLp4A2ASoAlUQI+i8ARCRt6W7frh5mXw+2c4cA4ZEvlGYgU8JkOeEikga8gsNdO9lsq+CYwaW5mDlJd6CEmrhY/v0aZPykm5nDnzwLUFvIA88TSZBQCEUCRnJLLnAJEyU25Tv/lC01kt3/tlXJ974mAT6uhDLGBsHaKfpEYJKQaKgF63VUFNoEqZdm67QCrVFVcO1ClLFu3HWCVqoprB6qUZeue3oEXr3xKMb7bQoAAAAAASUVORK5CYII="
+            />
+  
+          <h1>Contact Us</h1>
+  
+          <form id="contact-form" method="POST" action="#">
+            <input
+              class="input-control"
+              type="text"
+              id="name"
+              placeholder="Name"
+              required
+            />
+  
+            <input
+              class="input-control"
+              type="email"
+              id="email"
+              placeholder="E-mail"
+              required
+            />
+  
+            <textarea
+              class="contact-msg"
+              rows="9"
+              id="message"
+              placeholder="Leave a message"
+              maxlength="400"
+              required
+            ></textarea>
+  
+            <button class="submit" type="submit">
+              Submit
+            </button>
+  
+            <div class="sendingEmailStatus">
+              <div class="spinner">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAclJREFUaEPtmVFuAyEMRJOTtT1Zm5M1OVkbS7GEiM3YgFkj7f6lpDBv7HUMXC+bP9fN9V9OgKMjODMCny+Y7wKK/jZzjTe/ZkxOIkk0A9SLzFhDDfTI5CT415BCI2vA6XsmR46njsDPK100Z+7PnL8Vg/Q59PFEoCWeRNP48scKoIk/TDg7ZQHQxH89K094iqCQIgCt0qQQT3AI4E9wII14BCClzuE576nRtfvpxLciILmP0g29byHjmihqEcreJqX7rQjU6ZPSfQ2gTh+q9VR5Uj6SszVA2vTRIlDnf6q6bymj2wNs8wJrKZQNoKlHeokzpVDdTL5VxBMg+McBlnQpAjBswaLL6WFLYwFAbXckDywomZs5U0ujAUhbydUNnWk/0hJlmiAof8z7kRaAFIUVfZFrK4vSoq4CZHgkhHYKoupEACuPVbrWQgDk+IpTOU083ItYAKIhhgyyArQgaAw6JVSrKYfFHgAEQePULT6KM1M+Oy1POFq3OW4zvAC0gPVmxvsTwXcLrgPjHgAWhi47PADdpXkEoAT5aFzyaSBdjls29R7n6u/yLQ0Bcbrxu8Hf5SsoV6poomZEYAR4+H9PgGELByfYPgL/hz5oMXRLDekAAAAASUVORK5CYII="
+                />
+              </div>
+  
+              <div class="emailSent">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAThJREFUaEPtl8ENgzAMRc0WrMAW7Y2tSrfi1m7BCmxBlQMqiiA4/k4MknvpoY3znr9L0oZu/mpuzk8uYJ2gJ+AJgB3wEQIbCC/3BOAWggU8AbCB8HJPAG5hVKCd+sfcjV9u3Usl0E79sBC9GqL33I0DR+IyAiv8Cs2VuIRADL+ReJ6Nk7lAAp41RqYCKHxIykxAA95MQAveREATvrqANrxYIPe0DBuVgBcJSE7LUvDZApLTsiR8lkAYm4XoE99PUkd+afgsgdw5rgGfLcCVqAUvEjiTCJ+HK3HOqHGuzUffEV8ljrq8txH3aiwREQukktiClIQXj9AWMJVEaXgVgaMkasCrCcQSteBVBVaJ8M79Qy750e483TTK2NWAnkJ22P+dXcA6BU/AEwA74CMENhBe7gnALQQL/ADfn6ox7bfjNAAAAABJRU5ErkJggg=="/>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div> 
+
+    <div class="services">
+        <div class="basicInfo">
+            <div>
+                <h2>Web sites</h2>
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAARBJREFUaEPtl1EOwjAMQ7ObwcmAk42jQT6KULUOmpcITbg/Q6ri+dnd0BY7+FoO7t8E8OsG1YAagAnoCMEA8bgawBFCATUAA8TjagBHCAXUAAwQj/99Ayczu8MYkQZp4GpmFzO7PQH8d2RhjShAu3EzHYHI0Ah9Unrl60bcMxC9+SZ3nj2SWQ3MNDEyPxPAK78ogAtEjERmdp8tAjALkW7eDVCAbyFKzGcBfILwfX/d9it05nuRjAaa5ijlrTOcYj6zgRmINPMVAHvHyfdSzVcBjCDSzVcC9BAl5qsBGsT7dfdPKbKZ+RaK3B/PCABHCAXUAAwQj6sBHCEUUAMwQDyuBnCEUEANwADxuBrAEUKBB7c/LDHYu3A3AAAAAElFTkSuQmCC"/>
+            </div>
+
+            <div class="fullInfo">
+                <p>A website is a collection of web pages that are accessible through the internet. It serves as a digitalspace where businesses, individuals, and organizations can showcase information, products, or services.<br><br>
+
+                    Think of it as your online storefront or portfolio, whether it’s a simple landing page, a blog, or a fully interactive platform, a website helps you connect with your audience, build credibility, and share valuable content.<br><br>
+                    
+                    In short, if you need an online presence, a website is your foundation! 🚀</p>
+            </div>
+        </div>
+
+        <div class="basicInfo">
+            <div>
+                <h2>Web Apps</h2>
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAARBJREFUaEPtl1EOwjAMQ7ObwcmAk42jQT6KULUOmpcITbg/Q6ri+dnd0BY7+FoO7t8E8OsG1YAagAnoCMEA8bgawBFCATUAA8TjagBHCAXUAAwQj/99Ayczu8MYkQZp4GpmFzO7PQH8d2RhjShAu3EzHYHI0Ah9Unrl60bcMxC9+SZ3nj2SWQ3MNDEyPxPAK78ogAtEjERmdp8tAjALkW7eDVCAbyFKzGcBfILwfX/d9it05nuRjAaa5ijlrTOcYj6zgRmINPMVAHvHyfdSzVcBjCDSzVcC9BAl5qsBGsT7dfdPKbKZ+RaK3B/PCABHCAXUAAwQj6sBHCEUUAMwQDyuBnCEUEANwADxuBrAEUKBB7c/LDHYu3A3AAAAAElFTkSuQmCC"/>
+            </div>
+            
+            <div class="fullInfo">
+                <p>A web app is an interactive website designed to perform specific tasks or provide services online. Unlike a regular website that mainly displays information, a web app allows users to engage, interact, and perform actions—like signing in, making purchases, or managing data.<br><br>
+
+                    Examples of web apps include:<br>
+                      Online stores with checkout systems<br>
+                      Booking and reservation systems<br>
+                      Dashboards for managing business operations<br><br>
+                    
+                    Web apps are accessible from any device with an internet connection, making them convenient and user-friendly. They often feel like mobile or desktop apps but run in the browser, no downloads required!</p>
+            </div>
+        </div>
+       
+        <div class="basicInfo">
+            <div>
+                <h2>E-commerce</h2>
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAARBJREFUaEPtl1EOwjAMQ7ObwcmAk42jQT6KULUOmpcITbg/Q6ri+dnd0BY7+FoO7t8E8OsG1YAagAnoCMEA8bgawBFCATUAA8TjagBHCAXUAAwQj/99Ayczu8MYkQZp4GpmFzO7PQH8d2RhjShAu3EzHYHI0Ah9Unrl60bcMxC9+SZ3nj2SWQ3MNDEyPxPAK78ogAtEjERmdp8tAjALkW7eDVCAbyFKzGcBfILwfX/d9it05nuRjAaa5ijlrTOcYj6zgRmINPMVAHvHyfdSzVcBjCDSzVcC9BAl5qsBGsT7dfdPKbKZ+RaK3B/PCABHCAXUAAwQj6sBHCEUUAMwQDyuBnCEUEANwADxuBrAEUKBB7c/LDHYu3A3AAAAAElFTkSuQmCC"/>
+            </div>
+            
+            <div class="fullInfo">
+                <p>E-commerce refers to online stores where users can browse, purchase, and manage orders from anywhere. Unlike a regular website, an e-commerce platform includes features that make online shopping easy and secure.<br><br>
+
+                    Key features of an e-commerce site:<br>
+                    🛒 Product Listings – Display products with images, descriptions, and prices.<br>
+                    💳 Secure Checkout – Accept payments via credit cards, PayPal, or other methods.<br>
+                    📦 Order Management – Track purchases, shipping, and deliveries.<br>
+                    👤 User Accounts – Allow customers to save favorites, view order history, and manage profiles.<br><br>
+                    
+                    E-commerce websites make shopping more convenient, fast, and accessible for both businesses and customers. </p>
+            </div>
+        </div>
+
+        <div class="basicInfo">
+            <div>
+                <h2>SaaS</h2>
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAARBJREFUaEPtl1EOwjAMQ7ObwcmAk42jQT6KULUOmpcITbg/Q6ri+dnd0BY7+FoO7t8E8OsG1YAagAnoCMEA8bgawBFCATUAA8TjagBHCAXUAAwQj/99Ayczu8MYkQZp4GpmFzO7PQH8d2RhjShAu3EzHYHI0Ah9Unrl60bcMxC9+SZ3nj2SWQ3MNDEyPxPAK78ogAtEjERmdp8tAjALkW7eDVCAbyFKzGcBfILwfX/d9it05nuRjAaa5ijlrTOcYj6zgRmINPMVAHvHyfdSzVcBjCDSzVcC9BAl5qsBGsT7dfdPKbKZ+RaK3B/PCABHCAXUAAwQj6sBHCEUUAMwQDyuBnCEUEANwADxuBrAEUKBB7c/LDHYu3A3AAAAAElFTkSuQmCC"/>
+            </div>
+            
+            <div class="fullInfo">
+                <p>SaaS (Software as a Service) is a cloud-based solution that lets users access and use software online without needing to install anything on their devices. It’s perfect for businesses and individuals who want powerful tools with automatic updates and easy access from anywhere.<br><br>
+
+                    Why choose SaaS?<br>
+                    ☁️ Accessible Anywhere – Use the software from any device with an internet connection.<br>
+                    🔄 Always Up-to-Date – No need to install updates; they happen automatically.<br>
+                    💰 Cost-Effective – Pay only for what you need, often through a subscription model.<br>
+                    🤝 Collaboration Made Easy – Teams can work together in real-time from different locations.<br><br>
+                    
+                    SaaS platforms streamline workflows, improve efficiency, and provide a seamless user experience without the hassle of manual installations or maintenance.</p>
+            </div>
+        </div>
+
+        <div class="basicInfo">
+            <div>
+                <h2>Web Hosting</h2>
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAARBJREFUaEPtl1EOwjAMQ7ObwcmAk42jQT6KULUOmpcITbg/Q6ri+dnd0BY7+FoO7t8E8OsG1YAagAnoCMEA8bgawBFCATUAA8TjagBHCAXUAAwQj/99Ayczu8MYkQZp4GpmFzO7PQH8d2RhjShAu3EzHYHI0Ah9Unrl60bcMxC9+SZ3nj2SWQ3MNDEyPxPAK78ogAtEjERmdp8tAjALkW7eDVCAbyFKzGcBfILwfX/d9it05nuRjAaa5ijlrTOcYj6zgRmINPMVAHvHyfdSzVcBjCDSzVcC9BAl5qsBGsT7dfdPKbKZ+RaK3B/PCABHCAXUAAwQj6sBHCEUUAMwQDyuBnCEUEANwADxuBrAEUKBB7c/LDHYu3A3AAAAAElFTkSuQmCC"/>
+            </div>
+            
+            <div class="fullInfo">
+                <p>Web Hosting is the service that makes your website accessible on the internet by storing its files on a server.<br><br>
+
+                    Why choose Web Hosting?<br>
+                    🌐 Reliable – Keeps your website online.<br>
+                    ⚡ Fast – Ensures quick load times.<br>
+                    🔒 Secure – Protects your website from threats.<br>
+                    📈 Scalable – Easy to upgrade as your website grows.<br>
+                    🛠️ 24/7 Support – Helps whenever you need assistance.<br><br>
+                    
+                    Web hosting ensures your website runs smoothly, is fast, and stays secure. It's the foundation for getting your site online! 🌍🚀</p>
+            </div>
+        </div>
+
+        <div class="basicInfo">
+            <div>
+                <h2>Maintenance</h2>
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAARBJREFUaEPtl1EOwjAMQ7ObwcmAk42jQT6KULUOmpcITbg/Q6ri+dnd0BY7+FoO7t8E8OsG1YAagAnoCMEA8bgawBFCATUAA8TjagBHCAXUAAwQj/99Ayczu8MYkQZp4GpmFzO7PQH8d2RhjShAu3EzHYHI0Ah9Unrl60bcMxC9+SZ3nj2SWQ3MNDEyPxPAK78ogAtEjERmdp8tAjALkW7eDVCAbyFKzGcBfILwfX/d9it05nuRjAaa5ijlrTOcYj6zgRmINPMVAHvHyfdSzVcBjCDSzVcC9BAl5qsBGsT7dfdPKbKZ+RaK3B/PCABHCAXUAAwQj6sBHCEUUAMwQDyuBnCEUEANwADxuBrAEUKBB7c/LDHYu3A3AAAAAElFTkSuQmCC"/>
+            </div>
+            
+            <div class="fullInfo">
+                <p>
+                    If you choose us to host your website or web app, maintenance is free, if not we offer maintenance for a very good price.<br><br>
+
+                    Maintenance ensures your website or web app stays up-to-date, secure, and performs optimally.<br><br>
+
+                    Why choose Code Maintenance?<br>
+                    🔧 Bug Fixes – Corrects issues to keep everything running smoothly.<br>
+                    🛡️ Security Updates – Protects your site from potential threats.<br>
+                    ⚡ Performance Optimization – Enhances speed and reliability.<br>
+                    📅 Ongoing Support – Regular checkups to ensure everything works well.<br><br>
+                    
+                    With maintenance, your website or web app remains efficient, secure, and always up to date!</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="contactContainer">
+        <div class="contactBlock">
+          <h1>CONTACT US</h1>
+          <p>Get in touch with us, ask anything, and we'll provide you with a free preview of how <br>
+            your website or web app will look and perform based on your unique<br>
+            needs and preferences. If you love it, we move forward with the build.<br>
+            If not, we won’t stop until you’re completely satisfied.</p>
+            <div class="contactBtn">
+              <h2>Contact Us</h2>
+            </div>
+        </div>
+    </div>
+    
+    <div class="footer">
+        <img src="images/logo2.png" alt="">
+  
+        <h1 class="constellarweb">ConstellarWeb</h1>
+  
+        <div>
+          <h1>Links</h1>
+          <p>Home</p>
+          <p>About</p>
+          <p>Services</p>
+          <p class="contactBtn">Contact</p>
+          <p>Projects</p>
+        </div>
+  
+        <div>
+          <h1>Services</h1>
+          <p>All Services</p>
+        </div>
+  
+        <div>
+          <h1>Get in touch</h1>
+          <p class="email">constellarweb@gmail.com</p>
+          <p class="telegram">Telegram: <span>https://t.me/ConstellarWeb</span><br>
+          or @ConstellarWeb</p>
+        </div>
+      </div>
+
+      <script src="script.js"></script>
+    </body>
+</html>

@@ -1,0 +1,137 @@
+/*overlay when clicking the contact*/
+.overlay{
+  width: 100%;
+  height: 100vh;
+  background-color: #00000068;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.overlay.display{
+  display: flex;
+}
+
+body.no-scroll{
+  height: 100%;
+  overflow: hidden;
+}
+
+/*Contact us form*/
+.contactUsForm {
+  width: 40%;
+  height: auto;
+  min-height: 460px;
+  background-color: white;
+  z-index: 10001;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.contactUsForm .closeBtn {
+  width: 30px;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  cursor: pointer;
+}
+
+.contactUsForm h1{
+  margin: 20px 0 20px 0 ;
+}
+
+.display{
+  display: flex;
+}
+
+.contactUsForm form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.contactUsForm form input{
+ width: 90%;
+ height: 40px;
+}
+
+.contactUsForm form textarea{
+  width: 90%;
+}
+
+.submit {
+  width: 150px;
+  height: 50px;
+  background-color: black;
+  border-radius: 0.5rem;
+  color: white;
+  border: 0;
+  cursor: pointer;
+}
+
+.submit.hidden{
+  display: none;
+}
+
+/*Sending status*/
+.spinner {
+  width: 148px;
+  height: 48px;
+  border-radius: 0.5rem;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+}
+
+.spinner.display{
+  display: flex;
+}
+
+.spinner img {
+  width: 30px; /* Make the image fit within the container */
+  height: 30px;
+  animation: spin 1s linear infinite; /* Apply the spin animation */
+  position: relative;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg); 
+  }
+  to {
+    transform: rotate(360deg); 
+  }
+}
+
+/*email sent status*/
+.emailSent {
+  width: 148px;
+  height: 48px;
+  border-radius: 10px;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #17D748;
+}
+
+.emailSent.display{
+  display: flex;
+}
+
+.emailSent img{
+  width: 40px;
+  height: 40px;
+}
+
+

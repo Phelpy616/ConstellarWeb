@@ -1,0 +1,306 @@
+* {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  font-family: 'Montserrat';
+}
+
+body {
+  background-color: #d2d2d2;
+  background-image: repeating-linear-gradient(
+      to right,
+      transparent 0 100px,
+      #25283b22 100px 101px
+    ),
+    repeating-linear-gradient(
+      to bottom,
+      transparent 0 100px,
+      #25283b22 100px 101px
+    );
+}
+
+.banner {
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.banner .slider {
+  position: absolute;
+  width: 250px;
+  height: 150px;
+  top: 20%;
+  left: calc(50% - 120px);
+  transform-style: preserve-3d;
+  transform: perspective(1000px);
+  animation: autoRun 30s linear infinite;
+  z-index: 2;
+}
+
+@keyframes autoRun {
+  from {
+    transform: perspective(1000px) rotateX(-16deg) rotateY(0deg);
+  }
+  to {
+    transform: perspective(1000px) rotateX(-16deg) rotateY(360deg);
+  }
+}
+
+.banner .slider .item {
+  position: absolute;
+  inset: 0 0 0 0;
+  transform: rotateY(
+      calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg)
+    )
+    translateZ(550px);
+  cursor: pointer; 
+}
+
+.banner .slider .item img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+
+.banner .content {
+  position: absolute;
+  bottom: -43px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(1400px, 100vw);
+  height: max-content;
+  padding-bottom: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1;
+}
+
+.banner .content h1 {
+  font-size: 10em;
+  line-height: 1em;
+  font-weight: 600;
+  color: #000000;
+  position: relative;
+}
+
+.banner .content p {
+  font-size: 3em;
+  line-height: 1em;
+  color: #000000;
+  position: absolute;
+  top: 60%;
+  margin-left: 10px;
+}
+
+.banner .content h2 {
+  font-size: 3em;
+}
+
+.banner .content .model {
+  width: 100%;
+  height: 75vh;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-size: auto 130%;
+  background-repeat: no-repeat;
+  background-position: top center;
+  z-index: 1;
+}
+
+/*line after baner*/
+.line{
+  width: 90%;
+  height: 1px;
+  background-color: black;
+  margin-top: 30px;
+  justify-self: center;
+}
+
+/*pageBottom configurations*/
+.pageBottom {
+  width: 100%;
+  margin: 100px 0 100px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+}
+
+.pageBottom .text{
+  width: 50%;
+  gap: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pageBottom .text h1 {
+  font-size: 3em;
+  line-height: 1em;
+  font-weight: 600;
+  color: #000000;
+  width: fit-content;
+}
+
+.pageBottom .text p{
+  font-weight: 400;
+  color: #000000;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+/*header*/
+.header {
+  width: 100%;
+  display: flex;
+  box-sizing: border-box;
+  padding: 10px;
+  justify-content: center;
+  gap: 50px;
+  position: relative;
+}
+
+.header img{
+  width: 40px;
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  cursor: pointer;
+}
+
+.header h1 {
+  font-size: 1.5rem;
+  color: #25283b;
+  text-decoration: none;
+  cursor: pointer;
+  font-weight: 400;
+}
+
+/*about us*/
+.aboutUs {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 200px;
+}
+
+.aboutUs h1 {
+
+  font-size: 3em;
+  color: #25283b;
+  line-height: 2em;
+}
+
+.aboutUs p {
+
+  font-size: 2.5em;
+  color: #25283b;
+  text-align: justify;
+  width: 60%;
+}
+
+.pause-animation {
+  animation-play-state: paused !important;
+}
+
+/*contact us field*/
+.contactContainer{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.contactContainer .contactBlock{
+  width: 70%;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.contactContainer .contactBlock h1{
+  font-size: 2.5rem;
+}
+
+.contactContainer .contactBlock p{
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.contactContainer .contactBlock div{
+  width: 25%;
+  height: 50px;
+  background-color: rgb(0, 0, 0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease; 
+  margin-top: 10px;
+}
+
+.contactContainer .contactBlock div:hover {
+  background-color: #767978;
+}
+
+.contactContainer .contactBlock div h2{
+  color: white;
+  font-weight: 300;
+}
+
+/*footer*/
+.footer{
+  width: 100%;
+  height: 300px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+  position: relative;
+}
+
+.footer img{
+  width: 100px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 80px;
+}
+
+.footer .constellarweb{
+  margin-left: 60px;
+}
+
+.footer div{
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.footer div p{
+  cursor: pointer;
+}
+
+.footer div .email,
+.footer div .telegram{
+  cursor: default;
+}
+
+.footer div .telegram span{
+  cursor: pointer;
+  text-decoration: underline;
+  color: blue;
+}
+
+

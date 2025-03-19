@@ -1,0 +1,48 @@
+.animationContainer{
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.animationContainer img:nth-child(1){
+    width: 350px;
+}
+
+.animationContainer img:nth-child(2){
+    width: 90px;
+    position: absolute;
+    top: 18%;
+    left: 30%;
+    animation: gear-spin 12s linear infinite;
+}
+
+.animationContainer img:nth-child(3){
+    width: 60px;
+    position: absolute;
+    top: 43.5%;
+    left: 48%;
+    animation: gear-spin-reverse 12s linear infinite;
+}
+
+@keyframes gear-spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes gear-spin-reverse {
+    from {
+        transform: rotate(360deg);
+    }
+    to {
+        transform: rotate(0deg);
+    }
+}
+
+
+
+
+
