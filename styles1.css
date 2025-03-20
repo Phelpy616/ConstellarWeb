@@ -17,6 +17,10 @@ body {
       transparent 0 100px,
       #25283b22 100px 101px
     );
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 
 .banner {
