@@ -27,63 +27,11 @@
     <div class="banner">
 
       <div class="header">
-        <img src="images/logo2.png" alt="">
+        <img src="images/logo2.png" class="logo">
         <h1 data-url="about.html">About</h1>
         <h1 data-url="services.html">Services</h1>
         <h1 class="contactBtn">Contact</h1>
       </div>
-
-    <div class="overlay">
-      <div class="contactUsForm">
-          <img class="closeBtn"
-            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAS1JREFUaEPtWFsOwkAInN5MT6Y306MZEvenbtuBgWgN/RXYeQBuu+Dkz3Jy/GgC33awHWgHRAW6hUQB5fR2QJZQLNAOiALK6YoDdwA3AFcAzyASuUaUwDh44I6QyKgRusxdADwmintIrMGPcm5B3Qnvk7YAMCSU3A/dogSsUARIJGd3vBQCXhLp4A2ASoAlUQI+i8ARCRt6W7frh5mXw+2c4cA4ZEvlGYgU8JkOeEikga8gsNdO9lsq+CYwaW5mDlJd6CEmrhY/v0aZPykm5nDnzwLUFvIA88TSZBQCEUCRnJLLnAJEyU25Tv/lC01kt3/tlXJ974mAT6uhDLGBsHaKfpEYJKQaKgF63VUFNoEqZdm67QCrVFVcO1ClLFu3HWCVqoprB6qUZeue3oEXr3xKMb7bQoAAAAAASUVORK5CYII="
-          />
-
-        <h1>Contact Us</h1>
-
-        <form id="contact-form" method="POST" action="#">
-          <input
-            class="input-control"
-            type="text"
-            id="name"
-            placeholder="Name"
-            required
-          />
-
-          <input
-            class="input-control"
-            type="email"
-            id="email"
-            placeholder="E-mail"
-            required
-          />
-
-          <textarea
-            class="contact-msg"
-            rows="9"
-            id="message"
-            placeholder="Leave a message"
-            maxlength="400"
-            required
-          ></textarea>
-
-          <button class="submit" type="submit">
-            Submit
-          </button>
-
-          <div class="sendingEmailStatus">
-            <div class="spinner">
-              <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAclJREFUaEPtmVFuAyEMRJOTtT1Zm5M1OVkbS7GEiM3YgFkj7f6lpDBv7HUMXC+bP9fN9V9OgKMjODMCny+Y7wKK/jZzjTe/ZkxOIkk0A9SLzFhDDfTI5CT415BCI2vA6XsmR46njsDPK100Z+7PnL8Vg/Q59PFEoCWeRNP48scKoIk/TDg7ZQHQxH89K094iqCQIgCt0qQQT3AI4E9wII14BCClzuE576nRtfvpxLciILmP0g29byHjmihqEcreJqX7rQjU6ZPSfQ2gTh+q9VR5Uj6SszVA2vTRIlDnf6q6bymj2wNs8wJrKZQNoKlHeokzpVDdTL5VxBMg+McBlnQpAjBswaLL6WFLYwFAbXckDywomZs5U0ujAUhbydUNnWk/0hJlmiAof8z7kRaAFIUVfZFrK4vSoq4CZHgkhHYKoupEACuPVbrWQgDk+IpTOU083ItYAKIhhgyyArQgaAw6JVSrKYfFHgAEQePULT6KM1M+Oy1POFq3OW4zvAC0gPVmxvsTwXcLrgPjHgAWhi47PADdpXkEoAT5aFzyaSBdjls29R7n6u/yLQ0Bcbrxu8Hf5SsoV6poomZEYAR4+H9PgGELByfYPgL/hz5oMXRLDekAAAAASUVORK5CYII="
-              />
-            </div>
-
-            <div class="emailSent">
-              <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAThJREFUaEPtl8ENgzAMRc0WrMAW7Y2tSrfi1m7BCmxBlQMqiiA4/k4MknvpoY3znr9L0oZu/mpuzk8uYJ2gJ+AJgB3wEQIbCC/3BOAWggU8AbCB8HJPAG5hVKCd+sfcjV9u3Usl0E79sBC9GqL33I0DR+IyAiv8Cs2VuIRADL+ReJ6Nk7lAAp41RqYCKHxIykxAA95MQAveREATvrqANrxYIPe0DBuVgBcJSE7LUvDZApLTsiR8lkAYm4XoE99PUkd+afgsgdw5rgGfLcCVqAUvEjiTCJ+HK3HOqHGuzUffEV8ljrq8txH3aiwREQukktiClIQXj9AWMJVEaXgVgaMkasCrCcQSteBVBVaJ8M79Qy750e483TTK2NWAnkJ22P+dXcA6BU/AEwA74CMENhBe7gnALQQL/ADfn6ox7bfjNAAAAABJRU5ErkJggg=="/>
-            </div>
-          </div>
-        </form>
-      </div>
-    </div> 
 
       <div class="slider" style="--quantity: 10">
         <div class="item" style="--position: 1">
@@ -123,14 +71,109 @@
         <p>Web development</p>
       </div>
     </div>
+  </div> 
+
+  <div class="overlay">
+    <div class="contactUsForm">
+        <img class="closeBtn"
+          src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAS1JREFUaEPtWFsOwkAInN5MT6Y306MZEvenbtuBgWgN/RXYeQBuu+Dkz3Jy/GgC33awHWgHRAW6hUQB5fR2QJZQLNAOiALK6YoDdwA3AFcAzyASuUaUwDh44I6QyKgRusxdADwmintIrMGPcm5B3Qnvk7YAMCSU3A/dogSsUARIJGd3vBQCXhLp4A2ASoAlUQI+i8ARCRt6W7frh5mXw+2c4cA4ZEvlGYgU8JkOeEikga8gsNdO9lsq+CYwaW5mDlJd6CEmrhY/v0aZPykm5nDnzwLUFvIA88TSZBQCEUCRnJLLnAJEyU25Tv/lC01kt3/tlXJ974mAT6uhDLGBsHaKfpEYJKQaKgF63VUFNoEqZdm67QCrVFVcO1ClLFu3HWCVqoprB6qUZeue3oEXr3xKMb7bQoAAAAAASUVORK5CYII="
+        />
+
+      <h1>Contact Us</h1>
+
+      <form id="contact-form" method="POST" action="#">
+        <input
+          class="input-control"
+          type="text"
+          id="name"
+          placeholder="Name"
+          required
+        />
+
+        <input
+          class="input-control"
+          type="email"
+          id="email"
+          placeholder="E-mail"
+          required
+        />
+
+        <textarea
+          class="contact-msg"
+          rows="9"
+          id="message"
+          placeholder="Leave a message"
+          maxlength="400"
+          required
+        ></textarea>
+
+        <button class="submit" type="submit">
+          Submit
+        </button>
+
+        <div class="sendingEmailStatus">
+          <div class="spinner">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAclJREFUaEPtmVFuAyEMRJOTtT1Zm5M1OVkbS7GEiM3YgFkj7f6lpDBv7HUMXC+bP9fN9V9OgKMjODMCny+Y7wKK/jZzjTe/ZkxOIkk0A9SLzFhDDfTI5CT415BCI2vA6XsmR46njsDPK100Z+7PnL8Vg/Q59PFEoCWeRNP48scKoIk/TDg7ZQHQxH89K094iqCQIgCt0qQQT3AI4E9wII14BCClzuE576nRtfvpxLciILmP0g29byHjmihqEcreJqX7rQjU6ZPSfQ2gTh+q9VR5Uj6SszVA2vTRIlDnf6q6bymj2wNs8wJrKZQNoKlHeokzpVDdTL5VxBMg+McBlnQpAjBswaLL6WFLYwFAbXckDywomZs5U0ujAUhbydUNnWk/0hJlmiAof8z7kRaAFIUVfZFrK4vSoq4CZHgkhHYKoupEACuPVbrWQgDk+IpTOU083ItYAKIhhgyyArQgaAw6JVSrKYfFHgAEQePULT6KM1M+Oy1POFq3OW4zvAC0gPVmxvsTwXcLrgPjHgAWhi47PADdpXkEoAT5aFzyaSBdjls29R7n6u/yLQ0Bcbrxu8Hf5SsoV6poomZEYAR4+H9PgGELByfYPgL/hz5oMXRLDekAAAAASUVORK5CYII="
+            />
+          </div>
+
+          <div class="emailSent">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAThJREFUaEPtl8ENgzAMRc0WrMAW7Y2tSrfi1m7BCmxBlQMqiiA4/k4MknvpoY3znr9L0oZu/mpuzk8uYJ2gJ+AJgB3wEQIbCC/3BOAWggU8AbCB8HJPAG5hVKCd+sfcjV9u3Usl0E79sBC9GqL33I0DR+IyAiv8Cs2VuIRADL+ReJ6Nk7lAAp41RqYCKHxIykxAA95MQAveREATvrqANrxYIPe0DBuVgBcJSE7LUvDZApLTsiR8lkAYm4XoE99PUkd+afgsgdw5rgGfLcCVqAUvEjiTCJ+HK3HOqHGuzUffEV8ljrq8txH3aiwREQukktiClIQXj9AWMJVEaXgVgaMkasCrCcQSteBVBVaJ8M79Qy750e483TTK2NWAnkJ22P+dXcA6BU/AEwA74CMENhBe7gnALQQL/ADfn6ox7bfjNAAAAABJRU5ErkJggg=="/>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div> 
+
+    <div class="bannerMobile">
+      <div class="header">
+        <img src="images/logo2.png" class="logo">
+        <img class="menuBtn" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAK1JREFUaEPtlkEKwCAQxPT/j64/kIEwLNL07Ky7iWL3evzbj/e/HGDaoAY0AAl4hCBAHNcARggL/MLAByHR+BVyYsABoAINQIDdeHIHuh3A6g4AAeK4BjBCWCAx4EPWhKwBSDeJ41+JZJOxNckRGmsu2dgBEkrNNRpo0k1qJwZ8iROSlzX4HdDAtAG4fzeeXOJuB7C6A0CAOK4BjBAW0AAEiOMawAhhAQ1AgDh+AJfZDDGRtEaJAAAAAElFTkSuQmCC"/>
+      </div>
+
+      <div class="slider" id="projects">
+        <button class="prev">&#10094;</button>
+        <img src="images3/img1.png">
+        <img src="images3/img2.png">
+        <img src="images3/img3.png">
+        <img src="images3/img4.png">
+        <img src="images3/img5.png">
+        <img src="images3/img6.png">
+        <img src="images3/img7.png">
+        <img src="images3/img8.png">
+        <img src="images3/img9.png">
+        <img src="images3/img10.png">
+        <button class="next">&#10095;</button>
+      </div>
+
+      <h1>ConstellarWeb</h1>
+      <p>Web development</p>
+    </div>
+
+    <div class="menu">
+      <div><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAS1JREFUaEPtWFsOwkAInN5MT6Y306MZEvenbtuBgWgN/RXYeQBuu+Dkz3Jy/GgC33awHWgHRAW6hUQB5fR2QJZQLNAOiALK6YoDdwA3AFcAzyASuUaUwDh44I6QyKgRusxdADwmintIrMGPcm5B3Qnvk7YAMCSU3A/dogSsUARIJGd3vBQCXhLp4A2ASoAlUQI+i8ARCRt6W7frh5mXw+2c4cA4ZEvlGYgU8JkOeEikga8gsNdO9lsq+CYwaW5mDlJd6CEmrhY/v0aZPykm5nDnzwLUFvIA88TSZBQCEUCRnJLLnAJEyU25Tv/lC01kt3/tlXJ974mAT6uhDLGBsHaKfpEYJKQaKgF63VUFNoEqZdm67QCrVFVcO1ClLFu3HWCVqoprB6qUZeue3oEXr3xKMb7bQoAAAAAASUVORK5CYII="/></div>
+
+      <div><h1 data-url="about.html">About</h1></div>
+
+      <div><h1 data-url="services.html">Services</h1></div>
+
+      <div> <h1 class="contactBtn">Contact</h1></div>
+    </div>
 
     <div class="line"></div>
 
     <div class="pageBottom">
         <div class="text">
-          <h1>Bringing Your Ideas to Life<br>
+          <h1 class="h1Desktop">Bringing Your Ideas to Life<br>
               Without the Tech Headache
           </h1>
+
+          <h1 class="h1Mobile">
+            Bringing Your Ideas<br> 
+            to Life Without the<br> 
+            Tech Headache
+          </h1>
+
           <p>We get it, you don’t have to deal with technical complexities.
           That’s where we come in. We handle everything from design and development 
           to deployment and maintenance, so you can focus on your business. With our expertise, 
@@ -141,13 +184,7 @@
           <img src="images/computer.png" alt="">
           <img src="images/gear.png" alt="">
           <img src="images/gear.png" alt="">
-         </div> 
-
-        <!-- <div class="starDiv">
-          <img class="star" src="images/starRotates.jpg" alt="star" />
-          <img class="star2" src="images/starRotates.jpg" alt="star" />
-          <img class="star3" src="images/starRotates.jpg" alt="star" />
-        </div> -->
+        </div> 
     </div>
 
     <div class="line"></div>
@@ -155,35 +192,62 @@
     <div class="contactContainer">
       <div class="contactBlock">
         <h1>CONTACT US</h1>
-        <p>Get in touch with us, ask anything, and we'll provide you with a free preview of how <br>
-          your website or web app will look and perform based on your unique<br>
-          needs and preferences. If you love it, we move forward with the build.<br>
-          If not, we won’t stop until you’re completely satisfied.</p>
-          <div class="contactBtn">
-            <h2>Contact Us</h2>
-          </div>
+
+        <p>Contact us with any questions! Get a free preview of your website or web app based on your needs. Love it? We build it. Not satisfied? We refine it until you are!</p>
+
+        <div class="contactBtn">
+          <h2>Contact Us</h2>
+        </div>
       </div>
     </div>
 
     
 
     <div class="footer">
-      <img src="images/logo2.png" alt="">
+      <img src="images/logo2.png" class="logo">
 
       <h1 class="constellarweb">ConstellarWeb</h1>
 
+      <div class="frstDiv">
+        <h1>Links</h1>
+        <p data-url="index.html">Home</p>
+        <p data-url="about.html">About</p>
+        <p data-url="services.html">Services</p>
+        <p class="contactBtn">Contact</p>
+        <p data-url="index.html">Projects</p>
+      </div>
+
+      <div class="scndDiv">
+        <h1>Services</h1>
+        <p data-url="services.html">All Services</p>
+      </div>
+
+      <div class="thrdDiv">
+        <h1>Get in touch</h1>
+        <p class="email">constellarweb@gmail.com</p>
+        <p class="telegram">Telegram: <span>https://t.me/ConstellarWeb</span><br>
+        or @ConstellarWeb</p>
+      </div>
+    </div>
+
+    <div class="footerMobile">
+      <div>
+        <img src="images/logo2.png" class="logo">
+        <h1 class="constellarweb">ConstellarWeb</h1>
+      </div>
+
       <div>
         <h1>Links</h1>
-        <p>Home</p>
-        <p>About</p>
-        <p>Services</p>
+        <p data-url="index.html">Home</p>
+        <p data-url="about.html">About</p>
+        <p data-url="services.html">Services</p>
         <p class="contactBtn">Contact</p>
-        <p>Projects</p>
+        <p data-url="index.html">Projects</p>
       </div>
 
       <div>
         <h1>Services</h1>
-        <p>All Services</p>
+        <p data-url="services.html">All Services</p>
       </div>
 
       <div>

@@ -6,7 +6,7 @@
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 1000;
+  z-index: 1003;
   display: none;
   align-items: center;
   justify-content: center;
@@ -134,4 +134,9 @@ body.no-scroll{
   height: 40px;
 }
 
+@media (max-width:450px) {
+  .contactUsForm {
+    width: 90%;
+  }
+}
 

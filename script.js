@@ -114,7 +114,126 @@ headerH1s.forEach(h1=>{
 })
 
 //Go to home when click logo
-const logo = document.querySelector('.header img')
-logo.addEventListener('click',()=>{
+const logos = document.querySelectorAll('.logo')
+logos.forEach(logo=>{
+  logo.addEventListener('click',()=>{
+    window.location.href = 'index.html'
+  })
+})
+
+//navigate through footer
+const footerFrstDivPs = document.querySelectorAll('.footer .frstDiv p')
+footerFrstDivPs.forEach(p=>{
+  p.addEventListener('click',()=>{
+    if(!p.dataset.url) return
+    window.location.href = p.dataset.url
+  })
+})
+
+const footerScndDivP = document.querySelector('.footer .scndDiv p')
+footerScndDivP.addEventListener('click',()=>{
+   window.location.href = footerScndDivP.dataset.url
+})
+
+const footerThrdDivSpan = document.querySelector('.footer .thrdDiv .telegram span')
+footerThrdDivSpan.addEventListener('click',()=>{
+  window.location.href = footerThrdDivSpan.textContent
+})
+
+//Slider animation on mobile
+try{
+  const bannerMobileSliderImgs = document.querySelectorAll('.bannerMobile .slider img');
+  const prevBtn = document.querySelector('.prev');
+  const nextBtn = document.querySelector('.next');
+  let currentIndex = 0;
+  let interval;
+  
+  function startAutoSlide() {
+    interval = setInterval(() => showImg(), 3000);
+  }
+  
+  function stopAutoSlide() {
+    clearInterval(interval);
+  }
+  
+  function showImg(index) {
+    bannerMobileSliderImgs[currentIndex].classList.remove('display');
+  
+    // If index is given, use it; otherwise, go to the next image
+    currentIndex = (typeof index === "number" ? index : currentIndex + 1) % bannerMobileSliderImgs.length;
+  
+    bannerMobileSliderImgs[currentIndex].classList.add('display');
+  }
+  
+  // Initial setup
+  bannerMobileSliderImgs[currentIndex].classList.add('display');
+  startAutoSlide();
+  
+  // Button event listeners
+  prevBtn.addEventListener('click', () => {
+    stopAutoSlide(); // Stop auto sliding
+    showImg(currentIndex - 1); // Show previous image
+    startAutoSlide(); // Restart auto sliding
+  });
+  
+  nextBtn.addEventListener('click', () => {
+    stopAutoSlide();
+    showImg(currentIndex + 1);
+    startAutoSlide();
+  });
+}catch{}
+
+//Show/ hide the menu
+try{
+ const menuBtn = document.querySelector('.bannerMobile .header .menuBtn')
+ const menu = document.querySelector('.menu')
+ const closeMenuBtn = document.querySelector('.menu div:nth-child(1) img')
+ const body = document.body
+
+ menuBtn.addEventListener('click',()=>{
+  menu.classList.add('display')
+  body.classList.add('no-scroll')
+ })
+
+ closeMenuBtn.addEventListener('click',()=>{
+  menu.classList.remove('display')
+  body.classList.remove('no-scroll')
+ })
+}catch{}
+
+//Navigate through menu on mobile
+try{
+const menuH1s = document.querySelectorAll('.menu div h1')
+menuH1s.forEach(h1=>{
+  if(!h1 || !h1.dataset.url) return
+
+  h1.addEventListener('click',()=>{
+    window.location.href = h1.dataset.url
+  })
+})
+}catch{}
+
+//Navigate through footer on mobile
+try{
+  const footerMobilePs = document.querySelectorAll('.footerMobile div p')
+  footerMobilePs.forEach(p=>{
+    if(!p.dataset.url) return
+
+    p.addEventListener('click',()=>{
+      window.location.href = p.dataset.url
+    })
+  })
+
+  const telegramSpan = document.querySelector('.footerMobile .telegram span')
+  telegramSpan.addEventListener('click',()=>{
+    window.location.href = "https://t.me/ConstellarWeb"
+  })
+}catch{}
+
+//Clicking projetcs span in about will take to home page 
+try{
+const projetcsSpan = document.querySelector('.about p span')
+projetcsSpan.addEventListener('click',()=>{
   window.location.href = 'index.html'
 })
+}catch{}

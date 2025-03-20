@@ -27,6 +27,18 @@ body {
   position: relative;
 }
 
+.bannerMobile{
+  display: none;
+}
+
+.menu{
+  display: none;
+}
+
+.h1Mobile{
+  display: none;
+}
+
 .banner .slider {
   position: absolute;
   width: 250px;
@@ -218,7 +230,7 @@ body {
 
 .contactContainer .contactBlock{
   width: 70%;
-  height: 500px;
+  height: 400px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -269,12 +281,17 @@ body {
   position: relative;
 }
 
+.footerMobile{
+  display: none;
+}
+
 .footer img{
   width: 100px;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   left: 80px;
+  cursor: pointer;
 }
 
 .footer .constellarweb{
@@ -301,6 +318,219 @@ body {
   cursor: pointer;
   text-decoration: underline;
   color: blue;
+}
+
+@media (max-width:450px) {
+  .banner {
+    display: none;
+  }
+  
+  .bannerMobile{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .bannerMobile .header{
+    width: 100%;
+    height: auto;
+    display: flex;
+    background-color: rgb(210, 210, 210);
+    justify-content: space-between;
+  }
+
+  .bannerMobile .header img{
+    position: unset;
+    height: 40px;
+  }
+
+  .bannerMobile .slider{
+    position: relative;
+    width: 100%;
+    height: 200px;
+    margin-bottom: 20px;
+  }
+
+  .bannerMobile .slider img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+  }
+
+  .bannerMobile .slider img.display{
+    display: flex;
+  }
+
+  .bannerMobile h1{
+    font-size: 2.5rem;
+  }
+
+  .bannerMobile h1,
+  .bannerMobile p{
+    margin: 0 0 0 20px;
+  }
+
+  .bannerMobile .slider button.prev, 
+  .bannerMobile .slider button.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 10;
+    width: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.5rem;
+  }
+  
+  .bannerMobile .slider button.prev { left: 2px; }
+  
+  .bannerMobile .slider button.next { right: 2px; }
+
+/*menu*/
+.menu{
+  width: 100%;
+  height: 100vh;
+  background-color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1002;
+  display: none;
+  flex-direction: column;
+}
+
+.menu.display{
+  display: flex;
+}
+
+body.no-scroll{
+  height: 100%;
+  overflow: hidden;
+}
+
+.menu div:nth-child(1){
+  display: flex;
+  justify-content: flex-end;
+}
+
+.menu div:nth-child(2),
+.menu div:nth-child(3),
+.menu div:nth-child(4){
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.menu div:nth-child(2) h1,
+.menu div:nth-child(3) h1,
+.menu div:nth-child(4) h1{
+  font-weight: 400;
+}
+
+/*page bottom*/
+.pageBottom {
+  margin: 30px 0 20px 0;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.pageBottom .text{
+  width: 90%;
+  gap: 20px;
+}
+
+.pageBottom .text .h1Desktop {
+  display: none;
+}
+
+.pageBottom .text .h1Mobile{
+  font-size: 1.8em;
+  font-weight: 500;
+}
+
+.pageBottom .text p{
+  font-weight: 400;
+  color: #000000;
+  text-align: justify;
+  font-size: 1rem;
+}
+
+/*contact us field*/
+.contactContainer{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.contactContainer .contactBlock{
+  width: 90%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.contactContainer .contactBlock h1{
+  font-size: 2rem;
+}
+
+.contactContainer .contactBlock p{
+  text-align: justify;
+  font-size: 1rem;
+}
+
+.contactContainer .contactBlock div{
+  width: 50%;
+  margin-top: 10px;
+}
+
+/*footer*/
+.footer{
+  display: none;
+}
+
+.footerMobile{
+  width: 100%;
+  height: auto;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+.footerMobile div{
+  box-sizing: border-box;
+  padding: 20px;
+}
+
+.footerMobile div:nth-child(1){
+  display: flex;
+  gap: 20px;
+}
+
+.footerMobile div:nth-child(1) img{
+  width: 40px;
+}
+
+.footerMobile div:nth-child(4) .telegram span{
+  color: blue;
+  text-decoration: underline;
+}
 }
 
 
