@@ -141,47 +141,94 @@ footerThrdDivSpan.addEventListener('click',()=>{
 })
 
 //Slider animation on mobile
-try{
-  const bannerMobileSliderImgs = document.querySelectorAll('.bannerMobile .slider img');
-  const prevBtn = document.querySelector('.prev');
-  const nextBtn = document.querySelector('.next');
-  let currentIndex = 0;
-  let interval;
+// try{
+//   const bannerMobileSliderImgs = document.querySelectorAll('.bannerMobile .slider img');
+//   const prevBtn = document.querySelector('.prev');
+//   const nextBtn = document.querySelector('.next');
+//   let currentIndex = 0;
+//   let interval;
   
-  function startAutoSlide() {
-    interval = setInterval(() => showImg(), 3000);
+//   function startAutoSlide() {
+//     interval = setInterval(() => showImg(), 3000);
+//   }
+  
+//   function stopAutoSlide() {
+//     clearInterval(interval);
+//   }
+  
+//   function showImg(index) {
+//     bannerMobileSliderImgs[currentIndex].classList.remove('display');
+  
+//     // If index is given, use it; otherwise, go to the next image
+//     currentIndex = (typeof index === "number" ? index : currentIndex + 1) % bannerMobileSliderImgs.length;
+  
+//     bannerMobileSliderImgs[currentIndex].classList.add('display');
+//   }
+  
+//   // Initial setup
+//   bannerMobileSliderImgs[currentIndex].classList.add('display');
+//   startAutoSlide();
+  
+//   // Button event listeners
+//   prevBtn.addEventListener('click', () => {
+//     stopAutoSlide(); // Stop auto sliding
+//     showImg(currentIndex - 1); // Show previous image
+//     startAutoSlide(); // Restart auto sliding
+//   });
+  
+//   nextBtn.addEventListener('click', () => {
+//     stopAutoSlide();
+//     showImg(currentIndex + 1);
+//     startAutoSlide();
+//   });
+// }catch (err){console.log(err)}
+document.addEventListener("DOMContentLoaded", () => {
+  if (window.innerWidth <= 450) {
+    try {
+      const bannerMobileSliderImgs = document.querySelectorAll('.bannerMobile .slider img');
+      const prevBtn = document.querySelector('.prev');
+      const nextBtn = document.querySelector('.next');
+      let currentIndex = 0;
+      let interval;
+
+      function startAutoSlide() {
+        interval = setInterval(() => showImg(), 3000);
+      }
+
+      function stopAutoSlide() {
+        clearInterval(interval);
+      }
+
+      function showImg(index) {
+        bannerMobileSliderImgs[currentIndex].classList.remove('display');
+
+        // If index is given, use it; otherwise, go to the next image
+        currentIndex = (typeof index === "number" ? index : currentIndex + 1) % bannerMobileSliderImgs.length;
+
+        bannerMobileSliderImgs[currentIndex].classList.add('display');
+      }
+
+      // Initial setup
+      bannerMobileSliderImgs[currentIndex].classList.add('display');
+      startAutoSlide();
+
+      // Button event listeners
+      prevBtn.addEventListener('click', () => {
+        stopAutoSlide(); // Stop auto sliding
+        showImg(currentIndex - 1); // Show previous image
+        startAutoSlide(); // Restart auto sliding
+      });
+
+      nextBtn.addEventListener('click', () => {
+        stopAutoSlide();
+        showImg(currentIndex + 1);
+        startAutoSlide();
+      });
+    } catch (err) {
+      console.error("Error in slider script:", err);
+    }
   }
-  
-  function stopAutoSlide() {
-    clearInterval(interval);
-  }
-  
-  function showImg(index) {
-    bannerMobileSliderImgs[currentIndex].classList.remove('display');
-  
-    // If index is given, use it; otherwise, go to the next image
-    currentIndex = (typeof index === "number" ? index : currentIndex + 1) % bannerMobileSliderImgs.length;
-  
-    bannerMobileSliderImgs[currentIndex].classList.add('display');
-  }
-  
-  // Initial setup
-  bannerMobileSliderImgs[currentIndex].classList.add('display');
-  startAutoSlide();
-  
-  // Button event listeners
-  prevBtn.addEventListener('click', () => {
-    stopAutoSlide(); // Stop auto sliding
-    showImg(currentIndex - 1); // Show previous image
-    startAutoSlide(); // Restart auto sliding
-  });
-  
-  nextBtn.addEventListener('click', () => {
-    stopAutoSlide();
-    showImg(currentIndex + 1);
-    startAutoSlide();
-  });
-}catch (err){console.log(err)}
+});
 
 //Show/ hide the menu
 try{
