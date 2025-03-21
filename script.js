@@ -175,6 +175,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       // Button event listeners
       prevBtn.addEventListener('click', () => {
+        if(currentIndex === 0) return
         stopAutoSlide(); // Stop auto sliding
         showImg(currentIndex - 1); // Show previous image
         startAutoSlide(); // Restart auto sliding
