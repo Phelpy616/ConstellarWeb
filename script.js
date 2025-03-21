@@ -181,7 +181,7 @@ try{
     showImg(currentIndex + 1);
     startAutoSlide();
   });
-}catch{}
+}catch (err){console.log(err)}
 
 //Show/ hide the menu
 try{
