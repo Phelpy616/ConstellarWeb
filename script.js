@@ -246,3 +246,13 @@ projetcsSpan.addEventListener('click',()=>{
   window.location.href = 'index.html'
 })
 }catch{}
+
+//Clicking one of the projects in the top will take you to respective page 
+if(window.innerWidth < 450){
+  const projectsMobile = document.querySelectorAll('.bannerMobile .slider img')
+  projectsMobile.forEach(project=>{
+    project.addEventListener('click',()=>{
+      window.location.href = project.dataset.url
+    })
+  })
+}
