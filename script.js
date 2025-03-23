@@ -30,7 +30,7 @@ function sendEmail() {
   };
 
   emailjs
-    .send("service_54knmee", "template_olljhc8", parms)
+    .send("service_w8np9sl", "template_jgoyr7o", parms)
     .then(() => {
       emailSent();
       const form = document.getElementById("contact-form");
