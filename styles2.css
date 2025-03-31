@@ -140,3 +140,8 @@ body.no-scroll{
   }
 }
 
+@media (min-width: 451px) and (max-width: 834px) {
+  .contactUsForm{
+    width: 60%;
+  }
+}

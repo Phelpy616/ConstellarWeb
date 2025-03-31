@@ -384,4 +384,57 @@ body.no-scroll{
 }
 }
 
+/*media query for ipads*/
+@media (min-width: 451px) and (max-width: 834px) {
+  body {
+      justify-content: start;
+}
+
+/*services*/
+.services{
+  width: 90%;
+}
+
+/*contact us button*/
+.contactContainer .contactBlock div{
+  width: 30%;
+}
+
+  /*footer*/
+.footer{
+  height: 250px;
+  gap: 60px;
+}
+
+.footer img{
+  width: 50px;
+  top: 25%;
+  transform: none;
+}
+
+.footer .constellarweb{
+  margin-left: 40px;
+  font-size: 1rem;
+}
+
+.footer div h1{
+  font-size: 1.2rem;
+}
+}
+
+/*media query for ipads landscape*/
+@media (min-width: 1024px) and (max-width: 1366px) {
+
+ /*footer*/
+.footer img{
+ position: unset;
+}
+
+.footer .constellarweb{
+  display: none;
+}
+}
+
+
+
 

@@ -58,6 +58,22 @@
     }
 }
 
+@media (min-width: 451px) and (max-width: 768px){
+    .animationContainer img:nth-child(1){
+        width: 250px;
+    }
+    
+    .animationContainer img:nth-child(2){
+        width: 60px;
+        top: 19%;
+    }
+    
+    .animationContainer img:nth-child(3){
+        width: 40px;
+        top: 42.5%;
+        left: 47%;
+    }
+}
 
 
 

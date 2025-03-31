@@ -116,18 +116,6 @@ body {
   font-size: 3em;
 }
 
-.banner .content .model {
-  width: 100%;
-  height: 75vh;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  background-size: auto 130%;
-  background-repeat: no-repeat;
-  background-position: top center;
-  z-index: 1;
-}
-
 /*line after baner*/
 .line{
   width: 90%;
@@ -544,5 +532,168 @@ body.no-scroll{
   text-decoration: underline;
 }
 }
+
+/*media query for ipads portrait*/
+@media (min-width: 451px) and (max-width: 834px) {
+  .banner {
+    height: 50vh;
+  }
+
+  .banner .slider {
+    width: 160px; /* Reduce width */
+    height: 90px; /* Reduce height */
+    top: 10%; /* Move it up */
+    left: calc(50% - 80px); /* Center it */
+    transform: perspective(800px); /* Adjust perspective */
+    margin-top: 70px;
+  }
+
+  .banner .slider .item {
+    transform: rotateY(calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg)) 
+               translateZ(330px); /* Reduce translateZ to bring items closer */
+  }
+
+
+  .banner .content {
+    bottom: 0;
+    padding-bottom: 50px;
+    margin-left: 30px;
+  }
+  
+
+  .banner .content h1 {
+    font-size: 4em;
+  }
+
+  .banner .content p {
+    font-size: 1.8em;
+    top: 50%;
+  }
+
+  /*pageBottom configurations*/
+.pageBottom {
+  margin: 50px 0 50px 0;
+  box-sizing: border-box;
+  padding: 20px;
+}
+
+.pageBottom .text{
+  align-items: start;
+}
+
+.pageBottom .text h1 {
+  font-size: 1.5em;
+}
+
+.pageBottom .text p{
+  text-align: left;
+  font-size: 1rem;
+}
+
+ /*contact us button*/
+.contactContainer .contactBlock div{
+  width: 30%;
+}
+
+  /*footer*/
+.footer{
+  height: 250px;
+  gap: 60px;
+}
+
+.footer img{
+  position: unset;
+ }
+ 
+ .footer .constellarweb{
+   display: none;
+ }
+
+.footer div h1{
+  font-size: 1.2rem;
+}
+}
+
+/*media query for ipads landscape*/
+@media (min-width: 1024px) and (max-width: 1366px) {
+  .banner {
+    height: 80vh;
+  }
+
+  .banner .slider {
+    width: 220px; /* Reduce width */
+    height: 120px; /* Reduce height */
+    top: 10%; /* Move it up */
+    left: 39%;
+    margin-top: 70px;
+  }
+
+  .banner .slider .item {
+    transform: rotateY(calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg)) 
+               translateZ(410px); /* Reduce translateZ to bring items closer */
+  }
+
+  .banner .content {
+    bottom: 0;
+    left: 4%;
+    transform: none;
+    padding-bottom: 50px;
+   
+  }
+  
+  .banner .content h1 {
+    font-size: 7em;
+  }
+
+  /*pageBottom configurations*/
+.pageBottom {
+  margin: 80px 0 80px 0;
+}
+
+
+.pageBottom .text h1 {
+  font-size: 2em;
+}
+
+ /*footer*/
+.footer img{
+ position: unset;
+}
+
+.footer .constellarweb{
+  display: none;
+}
+}
+
+@media (device-width: 1024px) and (device-height: 1366px) {
+  .banner {
+    height: 50vh;
+  }
+
+  .banner .slider {
+    width: 230px; 
+    height: 120px; 
+  }
+}
+
+@media (device-width: 1366px) and (device-height: 1024px) {
+  .banner {
+    height: 80vh;
+  }
+
+  .banner .slider {
+    width: 250px; /* Reduce width */
+    height: 150px; /* Reduce height */
+    left: 41%;
+
+  }
+
+  .banner .slider .item {
+    transform: rotateY(calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg)) 
+               translateZ(520px); /* Reduce translateZ to bring items closer */
+  }
+
+}
+
 
 
