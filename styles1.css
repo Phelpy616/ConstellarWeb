@@ -665,6 +665,7 @@ body.no-scroll{
 }
 }
 
+/*ipad pro 13 portrait*/
 @media (device-width: 1024px) and (device-height: 1366px) {
   .banner {
     height: 50vh;
@@ -676,6 +677,7 @@ body.no-scroll{
   }
 }
 
+/*ipad pro 13 landscape*/
 @media (device-width: 1366px) and (device-height: 1024px) {
   .banner {
     height: 80vh;
