@@ -177,6 +177,20 @@ body {
   cursor: pointer;
 }
 
+/* .header .usaFlag{
+  width: 30px;
+  right: 20px;
+  left: unset;
+  top: 10px;
+}
+
+.header .brasilFlag{
+  width: 30px;
+  right: 60px;
+  left: unset;
+  top: 10px;
+} */
+
 .header h1 {
   font-size: 1.5rem;
   color: #25283b;
